@@ -1,0 +1,153 @@
+
+//standards
+$font-stack:    arial, sans-serif;
+$lightColor : white;
+$darkColor: #333;
+$baseFontSize: 14px;
+$mediumFontSize:17px;
+$largeFontSize : 20px;
+
+
+//colors button
+$defaultColor: rgb(216, 216, 216);
+$defaultColorHover: rgb(231, 231, 231);
+
+$infoColor: #3d5afe;
+$infoColorHover: #30BCFF;
+
+$successColor: #3dfe4d;
+$successColorHover: #2CE770;
+
+$warnColor: #feb13d;
+$warnColorHover: #FFD630;
+
+$dangerColor: #fe3d3d;
+$dangerColorHover: #FF5757;
+
+//style
+$defaultRadius: 6px;
+
+//screen size
+$desktopL : 1281px; //minWidth
+$desktop : 1280px;//maxWidth
+$tablet : 1024px;//maxWidth
+$smartphone : 767px;//maxWidth
+
+
+
+body {
+  font: $baseFontSize $font-stack;
+  color: $darkColor;
+}
+
+//##########################################################
+//################    BOUTONS_Standard    ###################
+//##########################################################
+
+// bouton par default
+.bouton{
+    cursor: pointer;
+    border-radius: $defaultRadius;
+    color: $lightColor;
+    line-height: 40px;
+    padding: .5em .8em; 
+}
+
+.bouton-na{
+    color: $darkColor;
+    border-radius: 0!important;
+}
+//bouton default
+.bouton-default{
+    color: $darkColor;
+    background-color: $defaultColor;
+}
+.bouton-default:hover{
+    background-color: $defaultColorHover;
+}
+
+//bouton bleu info
+.bouton-info{
+    background-color: $infoColor;
+}
+.bouton-info:hover{
+    background-color: $infoColorHover;
+}
+
+//bouton vert de succes
+.bouton-success{
+    background-color: $successColor;
+}
+
+.bouton-success:hover{
+    background-color: $successColorHover;
+}
+
+//bouton orange warn
+.bouton-warning{
+    background-color: $warnColor;
+}
+
+.bouton-warning:hover{
+    background-color: $warnColorHover;
+}
+
+//bouton rouge danger
+.bouton-danger{
+    background-color: $dangerColor;
+}
+.bouton-danger:hover{
+    background-color: $dangerColorHover;
+}
+
+//########################################################
+//########################################################
+//########################################################
+
+//##########################################################
+//################    BOUTONS_medium    ###################
+//##########################################################
+
+.bouton-m{
+    font-size: $mediumFontSize;
+    line-height: 50px;
+    // padding: 1em 1em;
+}
+
+
+//########################################################
+//########################################################
+//########################################################
+
+//##########################################################
+//################    BOUTONS_large    ###################
+//##########################################################
+
+.bouton-l{
+    font-size: $largeFontSize;
+    line-height: 50px;
+    // padding: 1em 1em;
+}
+
+//########################################################
+//########################################################
+//########################################################
+
+//########################################################
+//################  Grille de colone   ###################
+//########################################################
+
+
+
+$i : 1;
+$nbCol : 12;
+
+
+
+@for $i from 1 through $nbCol{
+    .nbCol-#{$i}{
+        width: percentage($i / $nbCol);
+        float: left;
+    }
+}
+
